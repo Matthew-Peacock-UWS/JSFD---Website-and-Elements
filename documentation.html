@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Documentation | Matthew Peacock</title>
+    <meta name="description" content="Documentation of my Element 5 BabylonJS scenes: concept, code, GUI and scene transitions.">
+
+    <!-- Bootstrap 5 (CSS framework) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Custom theme (matches my portfolio) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#doc-toc" data-bs-offset="120" tabindex="0">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Matthew Peacock<small>JSGF</small></a>
+
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">Elements</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="element1.html"><span>01</span>Checkpoint</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element2.html"><span>02</span>Dead Town</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element3.html"><span>03</span>Supply Run</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element4.html"><span>04</span>Dead Ground</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element5.html"><span>05</span>Escape</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-was-built.html">How It Was Built</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="documentation.html">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://github.com/Matthew-Peacock-UWS/JSGFpage"
+                            target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Page Hero -->
+        <header class="page-hero">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb section-label">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" class="text-reset">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active text-reset" aria-current="page">
+                            Documentation
+                        </li>
+                    </ol>
+                </nav>
+                <h1 class="display-title mb-4">Documentation</h1>
+                <p class="lead-muted mb-0">
+                    How my Element 5 scenes, the Outskirts and the Bunker, were designed and built:
+                    the concept, key code, the GUI and the scene transitions.
+                </p>
+            </div>
+        </header>
+
+
+        <section class="section">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Table of contents -->
+                    <div class="col-lg-3">
+                        <nav
+                            class="doc-toc list-group"
+                            id="doc-toc"
+                            aria-label="Documentation contents">
+                            <p class="section-label px-3">Contents</p>
+                            <a class="list-group-item list-group-item-action" href="#overview">Overview</a>
+                            <a class="list-group-item list-group-item-action" href="#concept">Concept &amp; Design</a>
+                            <a class="list-group-item list-group-item-action" href="#structure">Project Structure</a>
+                            <a class="list-group-item list-group-item-action" href="#scene-one">The Outskirts</a>
+                            <a class="list-group-item list-group-item-action" href="#scene-two">The Bunker</a>
+                            <a class="list-group-item list-group-item-action" href="#gui">GUI Elements</a>
+                            <a class="list-group-item list-group-item-action" href="#transitions">Scene Transitions</a>
+                            <a class="list-group-item list-group-item-action" href="#audio">Audio</a>
+                            <a class="list-group-item list-group-item-action" href="#assets">Assets &amp; Sources</a>
+                            <a class="list-group-item list-group-item-action" href="#references">References</a>
+                        </nav>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-lg-9">
+
+                        <section class="doc-section" id="overview">
+                            <p class="section-label">01</p>
+                            <h2>Overview</h2>
+                            <p>
+                                <strong>Escape</strong> is a short zombie-survival game made of two original levels.
+                                In <strong>the Outskirts</strong> the player searches a night-time valley for a keycard
+                                and then reaches a bunker in the hills. Walking into the bunker door loads
+                                <strong>the Bunker</strong>, an indoor level where the player has to reach a radio and
+                                call for rescue. A main menu and a rescue screen sit either side of the two levels.
+                            </p>
+
+                            <table class="table details-table mt-4" style="max-width: 560px">
+                                <tbody>
+                                    <tr><th scope="row">Scenes</th><td>Menu &rarr; Outskirts &rarr; Bunker &rarr; Rescue</td></tr>
+                                    <tr><th scope="row">Switching</th><td>GUI buttons and trigger meshes</td></tr>
+                                    <tr><th scope="row">Engine</th><td>BabylonJS 7 + Havok</td></tr>
+                                    <tr><th scope="row">Language</th><td>TypeScript (Vite)</td></tr>
+                                    <tr><th scope="row">Built in</th><td>Code only, no Babylon.js Editor (<a href="how-it-was-built.html" class="text-link">how it was built</a>)</td></tr>
+                                    <tr><th scope="row">Play it</th><td><a href="element5.html" class="text-link">Element 05 &rarr;</a></td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="doc-section" id="concept">
+                            <p class="section-label">02</p>
+                            <h2>Concept &amp; Design</h2>
+                            <p>
+                                All five elements share one setting: a town overrun by zombies. Element 5 turns that
+                                setting into a small game with a clear goal: <em>get out alive</em>. The two levels were
+                                designed to contrast with each other. The Outskirts is open, foggy and lit by the moon
+                                and fire, while the Bunker is enclosed, dark and lit by flickering strip lights and a
+                                spinning red siren.
+                            </p>
+                            <h3>Design decisions</h3>
+                            <ul>
+                                <li>
+                                    <strong>Emphasis:</strong> the bunker door is the focal point of the Outskirts, with
+                                    a pulsing red light so it can be seen through the fog. The burning car marks where
+                                    the keycard is.
+                                </li>
+                                <li>
+                                    <strong>Rhythm and repetition:</strong> dead trees are repeated around the valley as
+                                    instances at different sizes and angles.
+                                </li>
+                                <li>
+                                    <strong>Pace:</strong> fog limits how far the player can see, so zombies appear out
+                                    of the dark. The Bunker's side rooms hide zombies around corners.
+                                </li>
+                                <li>
+                                    <strong>Colour:</strong> a muted green-grey palette with warm firelight, red danger
+                                    lights and a cyan keycard so the important objects stand out.
+                                </li>
+                                <li>
+                                    <strong>Consistency:</strong> both levels use the same player, zombies, HUD and
+                                    pause menu, so the game feels like one piece.
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="doc-section" id="structure">
+                            <p class="section-label">03</p>
+                            <h2>Project Structure</h2>
+                            <p>
+                                Each scene is a function that builds and returns a <code>Scene</code>. Code used by more
+                                than one element, such as the player, zombies, props and GUI, lives in
+                                <code>src/shared/</code>, so each level file only has to describe its own layout and rules.
+                                Gameplay used by both levels (damage, medkits, pausing and dying) is in a single
+                                <code>Level</code> class.
+                            </p>
+                            <div class="code-block">
+                                <div class="code-label"><span>Folder structure</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>babylon-src/
+├── element5/index.html        // the page that loads Element 5
+└── src/
+    ├── element5/
+    │   ├── main.ts             // creates the engine and the scenes array
+    │   ├── gameState.ts        // health, keycard and timer shared between scenes
+    │   ├── level.ts            // damage, medkits, pause and death (used by both levels)
+    │   ├── menuScene.ts        // scene 0 - main menu
+    │   ├── outskirtsScene.ts   // scene 1 - the Outskirts
+    │   ├── bunkerScene.ts      // scene 2 - the Bunker
+    │   └── endingScene.ts      // scene 3 - rescue
+    ├── shared/                 // code reused by Elements 1-5
+    │   ├── sceneManager.ts     // scenes array + setSceneIndex()
+    │   ├── player.ts           // animated third-person player
+    │   ├── zombie.ts           // procedural zombie and chase behaviour
+    │   ├── props.ts            // merged-mesh props (houses, cars, trees...)
+    │   ├── environment.ts      // skybox, fog, moonlight, terrain, fire
+    │   ├── hud.ts / gui.ts / menu.ts   // Babylon GUI
+    │   └── audio.ts            // sound on/off + SoundBank
+    └── assets/                 // textures, skybox, height map, audio</code></pre>
+                            </div>
+                        </section>
+
+                        <section class="doc-section" id="scene-one">
+                            <p class="section-label">04</p>
+                            <h2>Scene One: The Outskirts</h2>
+                            <p>
+                                The Outskirts is built on terrain generated from a greyscale height map: the centre is
+                                flat and the edges rise into hills. Houses, wrecked cars and trees are placed on the terrain
+                                using <code>getHeightAtCoordinates</code>, and a burning car uses two particle systems
+                                (fire and smoke) with a flickering point light.
+                            </p>
+                            <h3>Building on the terrain</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>outskirtsScene.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// Terrain generated from a greyscale height map (shared/environment.ts)
+const terrain = await createTerrain(scene, {
+    size: 140,
+    subdivisions: 120,
+    maxHeight: 16,
+    material: lib.ground(14)
+});
+const heightAt = (x: number, z: number) =&gt; terrain.getHeightAtCoordinates(x, z);
+
+// Helper that stands any mesh on the terrain
+const place = (mesh: { position: Vector3 }, x: number, z: number, lift = 0) =&gt;
+    mesh.position.set(x, heightAt(x, z) + lift, z);
+
+const car = createCarWreck(scene, lib);
+place(car, -11, 4);
+createFire(scene, new Vector3(-11, heightAt(-11, 4) + 1, 4), 1);</code></pre>
+                            </div>
+                            <p>
+                                <code>createTerrain</code> returns a promise that resolves once the height map has loaded,
+                                so the scene waits for it before placing anything. The <code>place</code> helper reads the
+                                ground height at an x/z position and stands the mesh on it. The same <code>heightAt</code>
+                                function is passed to the player and the zombies so they walk over the hills.
+                            </p>
+                            <h3>Collecting the keycard</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>outskirtsScene.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// Keycard pickup - checked every frame
+scene.onBeforeRenderObservable.add(() =&gt; {
+    if (keycard.isEnabled()) {
+        keycard.rotation.y += 0.03;
+        keycard.position.y = keyBase + Math.sin(time * 2) * 0.1;
+        if (flatDistance(player.position, keycard.position) &lt; 1.7) {
+            gameState.hasKeycard = true;
+            keycard.setEnabled(false);
+            sounds.play(&quot;pickup&quot;);
+            hud.showMessage(&quot;KEYCARD FOUND&quot;, 2);
+            updateObjective();
+        }
+    }
+});</code></pre>
+                            </div>
+                            <p>
+                                Every frame the keycard spins and bobs. When the player gets within 1.7&nbsp;m, it is
+                                disabled, <code>gameState.hasKeycard</code> is set, a sound plays and the HUD objective
+                                changes to &ldquo;Get to the bunker door&rdquo;. Storing this in <code>gameState</code> means
+                                it is remembered if the level is paused or restarted.
+                            </p>
+                        </section>
+
+                        <section class="doc-section" id="scene-two">
+                            <p class="section-label">05</p>
+                            <h2>Scene Two: The Bunker</h2>
+                            <p>
+                                The Bunker is an indoor level built entirely from boxes. The layout is described as data,
+                                an array of walls, and one loop builds them all. That makes it easy to change the layout
+                                without writing new code.
+                            </p>
+                            <h3>Building the level from data</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>bunkerScene.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// [centre x, centre z, width (x), depth (z)]
+const WALLS: [number, number, number, number][] = [
+    // outer walls
+    [-7, 0, 0.4, 44],
+    [7, 0, 0.4, 44],
+    [0, -22, 14.4, 0.4],
+    [0, 22, 14.4, 0.4],
+    // left partition with doorways at z -12..-9 and 2..5
+    [-2.5, -17, 0.3, 10],
+    [-2.5, -3.5, 0.3, 11],
+    [-2.5, 13.5, 0.3, 17]
+    // ...
+];
+
+for (const [x, z, w, d] of WALLS) {
+    const wall = MeshBuilder.CreateBox(&quot;wall&quot;, { width: w, height: WALL_H, depth: d }, scene);
+    wall.position.set(x, WALL_H / 2, z);
+    wall.material = lib.brick(Math.max(w, d), WALL_H);
+    wall.checkCollisions = true;
+}</code></pre>
+                            </div>
+                            <p>
+                                Each wall gets a brick material whose texture is tiled to suit its length, so the bricks
+                                stay the same size on long and short walls. <code>checkCollisions</code> stops the player
+                                and zombies walking through walls, and the third-person camera has collisions turned on so
+                                it doesn't clip through them either.
+                            </p>
+                            <h3>Emergency lighting</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>bunkerScene.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// Rotating red emergency light: a spot light parented to a spinning node
+const sirenPivot = new TransformNode(&quot;sirenPivot&quot;, scene);
+sirenPivot.position.set(0, WALL_H - 0.4, 19.5);
+const sirenLight = new SpotLight(
+    &quot;sirenLight&quot;,
+    Vector3.Zero(),
+    new Vector3(1, -0.4, 0),
+    Math.PI / 2.5,
+    4,
+    scene
+);
+sirenLight.parent = sirenPivot;
+sirenLight.diffuse = new Color3(1, 0.1, 0.05);
+
+scene.onBeforeRenderObservable.add(() =&gt; {
+    sirenPivot.rotation.y += (engine.getDeltaTime() / 1000) * 2.5;
+});</code></pre>
+                            </div>
+                            <p>
+                                The siren is a spot light attached to an empty <code>TransformNode</code>. Rotating the node
+                                every frame sweeps the red light around the radio room. The ceiling lights use a flicker
+                                function that varies their intensity and occasionally cuts them out completely.
+                            </p>
+                        </section>
+
+                        <section class="doc-section" id="gui">
+                            <p class="section-label">06</p>
+                            <h2>GUI Elements</h2>
+                            <p>
+                                All menus and the HUD use Babylon GUI on a full-screen <code>AdvancedDynamicTexture</code>,
+                                with <code>idealHeight = 720</code> so they scale to any screen. The HUD shows a health bar,
+                                the keycard status, the current objective, a SOUND button and a PAUSE button. Centre-screen
+                                messages fade out on their own.
+                            </p>
+                            <h3>GUI responding to scene events</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>level.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// GUI reacting to scene events (element5/level.ts)
+for (const zombie of this.o.zombies) {
+    const d = zombie.distanceTo(player.position);
+    if (d &lt; 1 &amp;&amp; this.hurtCooldown &lt;= 0) {
+        gameState.health -= ZOMBIE_DAMAGE;
+        this.hurtCooldown = 1;
+        hud.flashDamage(); // red full-screen flash
+        hud.setHealth(gameState.health); // shrinks the health bar
+        sounds.play(&quot;hit&quot;);
+        if (gameState.health &lt;= 0) this.die();
+    }
+}</code></pre>
+                            </div>
+                            <p>
+                                When a zombie reaches the player, the health bar shrinks, the screen flashes red and a hit
+                                sound plays. A one-second cooldown stops the player losing all their health at once.
+                                Health is stored in <code>gameState</code>, so it carries over from the Outskirts into the Bunker.
+                            </p>
+                            <h3>Pop-up panels</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>level.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// Pop-up panel with buttons (shared/hud.ts)
+hud.showPanel(
+    &quot;YOU DIDN&#x27;T MAKE IT&quot;,
+    &quot;The dead got you. Try again?&quot;,
+    [
+        { label: &quot;TRY AGAIN&quot;, primary: true, onClick: () =&gt; this.restart() },
+        { label: &quot;MAIN MENU&quot;, onClick: () =&gt; this.o.manager.setSceneIndex(SCENES.menu) }
+    ],
+    &quot;#ff4a3a&quot;
+);</code></pre>
+                            </div>
+                            <p>
+                                Pause, game-over and win screens all use one <code>showPanel</code> method that takes a
+                                title, subtitle and a list of buttons. Each button is just a label and a function, which
+                                keeps the menus short to write.
+                            </p>
+                        </section>
+
+                        <section class="doc-section" id="transitions">
+                            <p class="section-label">07</p>
+                            <h2>Scene Transitions</h2>
+                            <p>
+                                Following the approach from the module, the scenes are stored in an array and
+                                <code>setSceneIndex</code> switches between them. Each entry is a function that builds its
+                                scene, so a scene is only created when it's needed and is rebuilt fresh on restart.
+                            </p>
+                            <h3>The scenes array</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>main.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// element5/main.ts
+const engine = createEngine();
+const manager = new SceneManager(engine, [
+    createEscapeMenu, // 0
+    createOutskirtsScene, // 1
+    createBunkerScene, // 2
+    createEndingScene // 3
+]);
+manager.setSceneIndex(0);</code></pre>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-label"><span>sceneManager.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// shared/sceneManager.ts - scenes are stored in an array
+export class SceneManager {
+    private current: Scene | null = null;
+
+    constructor(
+        private engine: Engine,
+        private scenes: SceneFactory[]
+    ) {
+        // Only the active scene is rendered
+        engine.runRenderLoop(() =&gt; {
+            if (this.current?.activeCamera) this.current.render();
+        });
+    }
+
+    setSceneIndex(index: number): void {
+        if (this.switching) return;
+        this.switching = true;
+        // wait for the current frame to finish before disposing the old scene
+        setTimeout(() =&gt; void this.load(index), 0);
+    }
+
+    private async load(index: number): Promise&lt;void&gt; {
+        this.current?.dispose();
+        const scene = await this.scenes[index](this.engine, this);
+        await scene.whenReadyAsync();
+        this.current = scene;
+        this.switching = false;
+    }
+}</code></pre>
+                            </div>
+                            <p>
+                                The old scene is disposed before the new one is created, which frees its meshes, sounds and
+                                GUI. <code>setSceneIndex</code> waits until the current frame has finished, because it is
+                                often called from inside the old scene's own update loop.
+                            </p>
+                            <h3>Switching from a GUI button</h3>
+                            <p>
+                                Menu buttons call <code>setSceneIndex</code> directly, for example START
+                                (<code>gameState.reset()</code> then scene 1), MAIN MENU (scene 0) and PLAY AGAIN on the
+                                rescue screen.
+                            </p>
+                            <h3>Switching from a scene event</h3>
+                            <div class="code-block">
+                                <div class="code-label"><span>outskirtsScene.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// Walking into the bunker door switches scene (outskirtsScene.ts)
+const tryEnterBunker = () =&gt; {
+    if (gameState.hasKeycard) {
+        level?.finish();
+        manager.setSceneIndex(SCENES.bunker);
+    } else {
+        hud.showMessage(&quot;LOCKED - FIND THE KEYCARD&quot;, 2.5);
+    }
+};
+
+doorTrigger.actionManager = new ActionManager(scene);
+doorTrigger.actionManager.registerAction(
+    new ExecuteCodeAction(
+        {
+            trigger: ActionManager.OnIntersectionEnterTrigger,
+            parameter: { mesh: player.hitbox, usePreciseIntersection: false }
+        },
+        tryEnterBunker
+    )
+);</code></pre>
+                            </div>
+                            <p>
+                                An invisible box sits in front of the bunker door. Its <code>ActionManager</code> fires when
+                                the player's hitbox enters it. With the keycard, the controls are locked and the Bunker loads;
+                                without it, a message tells the player the door is locked. The radio at the end of the Bunker
+                                uses the same technique to load the rescue scene.
+                            </p>
+                        </section>
+
+                        <section class="doc-section" id="audio">
+                            <p class="section-label">08</p>
+                            <h2>Audio</h2>
+                            <p>
+                                Audio starts off on every page and is turned on with the SOUND button. Browsers only allow
+                                sound after the user does something, so the button also unlocks Babylon's audio engine.
+                                Each scene keeps its sounds in a <code>SoundBank</code>: looping sounds (wind and music)
+                                start and stop with the SOUND setting, and effects play on events: picking up items,
+                                being hit, zombies groaning nearby and the bunker door opening.
+                            </p>
+                            <div class="code-block">
+                                <div class="code-label"><span>outskirtsScene.ts / audio.ts</span><button type="button" class="copy-btn">Copy</button></div>
+                                <pre><code>// shared/audio.ts - every sound for a scene in one place
+const sounds = new SoundBank(scene)
+    .add(&quot;wind&quot;, AUDIO.wind, { loop: true, volume: 0.6 })
+    .add(&quot;music&quot;, AUDIO.music, { loop: true, volume: 0.45 })
+    .add(&quot;pickup&quot;, AUDIO.pickup, { volume: 0.8 })
+    .add(&quot;hit&quot;, AUDIO.hit)
+    .add(&quot;groan&quot;, AUDIO.groan, { volume: 0.6 });
+
+// The SOUND button turns audio on - this also unlocks the browser&#x27;s audio
+export function setAudioOn(on: boolean): void {
+    audioOn = on;
+    if (on) Engine.audioEngine?.unlock();
+    listeners.forEach(listener =&gt; listener(on));
+}</code></pre>
+                            </div>
+                        </section>
+
+                        <section class="doc-section" id="assets">
+                            <p class="section-label">09</p>
+                            <h2>Assets &amp; Sources</h2>
+                            <p>Everything used in Element 5 and where it came from.</p>
+                            <div class="table-responsive">
+                                <table class="table table-assets align-middle">
+                                    <thead>
+                                        <tr><th scope="col">Asset</th><th scope="col">Type</th><th scope="col">Source</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>HVGirl (player)</td><td>3D model (.glb) with animations</td><td>Babylon.js asset library &mdash; assets.babylonjs.com</td></tr>
+                                        <tr><td>Zombies, houses, cars, trees, bunker, helicopter</td><td>Built in code from primitives</td><td>Original</td></tr>
+                                        <tr><td>Ground, concrete, brick, metal, rust, crate, bark, planks, roof, hazard textures</td><td>Images</td><td>Original, made for this project using GIMP</td></tr>
+                                        <tr><td>Night skybox and height map</td><td>Images</td><td>Original, made for this project using GIMP</td></tr>
+                                        <tr><td>Music, wind, pickup, hit, groan, door and click sounds</td><td>Audio (.mp3)</td><td>Original, made for this project using BandLab and ChipTone</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="doc-section" id="references">
+                            <p class="section-label">10</p>
+                            <h2>References</h2>
+                            <ul>
+                                <li>
+                                    Babylon.js Documentation.
+                                    <a href="https://doc.babylonjs.com/" target="_blank" rel="noopener">doc.babylonjs.com</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; Multiple Scenes.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/scene/multiScenes" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/multiScenes</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; The GUI.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/gui/gui" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/gui</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; Animated character.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/animation/animatedCharacter" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/animatedCharacter</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; Havok physics.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/physics/havokPlugin" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/havokPlugin</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; Ground from a height map.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/ground_hmap" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/ground_hmap</a>
+                                </li>
+                                <li>
+                                    Babylon.js &mdash; Actions.
+                                    <a href="https://doc.babylonjs.com/features/featuresDeepDive/events/actions" target="_blank" rel="noopener">doc.babylonjs.com/&hellip;/actions</a>
+                                </li>
+                                <li>
+                                    Babylon.js Playground.
+                                    <a href="https://playground.babylonjs.com/" target="_blank" rel="noopener">playground.babylonjs.com</a>
+                                </li>
+                                <li>
+                                    Bootstrap 5 Documentation.
+                                    <a href="https://getbootstrap.com/docs/5.3/" target="_blank" rel="noopener">getbootstrap.com</a>
+                                </li>
+                                <li>
+                                    Elster, J. (2022). <em>Going the Distance with Babylon.js</em>. Packt Publishing
+                                    Ltd.
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Back to top -->
+    <button
+        type="button"
+        class="btn btn-dark back-to-top"
+        id="back-to-top"
+        aria-label="Back to top">&uarr;</button>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+            <p class="mb-0">
+                &copy; <span class="js-year"></span> Matthew Peacock &middot; JavaScript Games:
+                Programming Fundamentals
+            </p>
+            <p class="mb-0">
+                Built with Bootstrap 5 &amp; BabylonJS &middot;
+                <a href="https://github.com/Matthew-Peacock-UWS/JSGFpage" target="_blank" rel="noopener noreferrer">View
+                    on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

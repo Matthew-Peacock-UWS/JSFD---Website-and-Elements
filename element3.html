@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Element 3: Supply Run | Matthew Peacock</title>
+    <meta name="description" content="An animated survivor pushing crates into a safe zone: player movement, animation and Havok physics.">
+
+    <!-- Bootstrap 5 (CSS framework) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Custom theme (matches my portfolio) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Matthew Peacock<small>JSGF</small></a>
+
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle active"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">Elements</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="element1.html"><span>01</span>Checkpoint</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element2.html"><span>02</span>Dead Town</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item active" aria-current="page" href="element3.html"><span>03</span>Supply
+                                    Run</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element4.html"><span>04</span>Dead Ground</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element5.html"><span>05</span>Escape</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-was-built.html">How It Was Built</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://github.com/Matthew-Peacock-UWS/JSGFpage"
+                            target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Page Hero -->
+        <header class="page-hero">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb section-label">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" class="text-reset">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active text-reset" aria-current="page">
+                            Element 03
+                        </li>
+                    </ol>
+                </nav>
+                <h1 class="display-title mb-4">Supply Run</h1>
+                <p class="lead-muted mb-0">
+                    An animated survivor pushing crates into a safe zone: player movement, animation and
+                    Havok physics.
+                </p>
+            </div>
+        </header>
+
+
+        <!-- Scene -->
+        <section class="section">
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class="col-lg-8">
+                        <p class="section-label">Play the Scene</p>
+
+                        <div class="scene-viewer" id="scene-viewer">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    src="scenes/element3/index.html"
+                                    title="Element 3: Supply Run (BabylonJS scene)"
+                                    allow="autoplay; fullscreen; gamepad"
+                                    allowfullscreen
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="scene-toolbar">
+                            <button
+                                type="button"
+                                class="btn btn-dark btn-sm"
+                                data-fullscreen="#scene-viewer">&#x26F6; Fullscreen</button>
+                            <a
+                                href="scenes/element3/index.html"
+                                class="btn btn-outline-dark btn-sm"
+                                target="_blank"
+                                rel="noopener">Open in new tab &#8599;</a>
+                        </div>
+                    </div>
+
+                    <aside class="col-lg-4">
+                        <p class="section-label">Controls</p>
+                        <table class="table details-table mb-5">
+                            <tbody>
+                                <tr><th scope="row">Move / turn</th><td>W A S D / Arrows</td></tr>
+                                <tr><th scope="row">Run</th><td>Shift</td></tr>
+                                <tr><th scope="row">Look around</th><td>Click + drag</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p class="section-label">Built With</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge tag">Imported Mesh</span>
+                            <span class="badge tag">Player Input</span>
+                            <span class="badge tag">Animation</span>
+                            <span class="badge tag">Havok Physics</span>
+                        </div>
+
+                        <p class="code-note">
+                            Built entirely in code: no Babylon.js Editor.
+                            <a href="how-it-was-built.html" class="text-link">How it was built &rarr;</a>
+                        </p>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About the scene -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class="col-lg-7">
+                        <p class="section-label">About the Scene</p>
+                        <h2 class="section-title">Element 03</h2>
+
+                        <p>
+                            A walled supply yard at night. Walk the survivor around, push the supply crates into
+                            the green safe zone, topple the crate pyramid and knock over the zombie training
+                            dummies. Crates in the zone turn green and the counter shows how many have been
+                            secured.
+                        </p>
+
+                        <h3 class="h5 fw-bold mt-4">Beyond the lab</h3>
+                        <ul>
+                            <li>
+                                Third-person camera that swings in behind the player while walking
+                            </li>
+                            <li>
+                                An animated capsule physics body so the player can push dynamic objects
+                            </li>
+                            <li>
+                                Zombie training dummies built as a model riding on a physics box
+                            </li>
+                            <li>
+                                The crate counter and safe-zone light react to what happens in the scene
+                            </li>
+                            <li>Hold Shift to run - the walk animation speeds up to match</li>
+                        </ul>
+
+                        <h3 class="h5 fw-bold mt-4">Assets</h3>
+                        <ul class="mb-0">
+                            <li>
+                                HVGirl.glb character: Babylon.js asset library (assets.babylonjs.com)
+                            </li>
+                            <li>
+                                Concrete, brick, crate, rust and hazard-stripe textures: original, made for this
+                                project
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <p class="section-label">What This Scene Demonstrates</p>
+                        <ul class="list-group list-group-flush checklist">
+                            <li class="list-group-item">
+                                <span class="tick" aria-hidden="true">&#10003;</span>
+                                <div><strong>Moveable player</strong><small>HVGirl.glb imported with SceneLoader and moved with W A S D / arrow keys</small></div>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="tick" aria-hidden="true">&#10003;</span>
+                                <div><strong>Player animation</strong><small>Idle, walking and walking-back animation groups switch with movement</small></div>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="tick" aria-hidden="true">&#10003;</span>
+                                <div><strong>Interaction &amp; physics</strong><small>Havok physics: crates, barrels and dummies are pushed and topple; walls block the player</small></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Element pager -->
+        <section class="py-5">
+            <div class="container">
+                <nav class="element-pager" aria-label="Element pages">
+                    <ul class="pagination flex-wrap justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="element2.html">&larr; Element 02</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="element1.html">1</a></li>
+                        <li class="page-item"><a class="page-link" href="element2.html">2</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">3</span>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="element4.html">4</a></li>
+                        <li class="page-item"><a class="page-link" href="element5.html">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="element4.html">Element 04 &rarr;</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Back to top -->
+    <button
+        type="button"
+        class="btn btn-dark back-to-top"
+        id="back-to-top"
+        aria-label="Back to top">&uarr;</button>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+            <p class="mb-0">
+                &copy; <span class="js-year"></span> Matthew Peacock &middot; JavaScript Games:
+                Programming Fundamentals
+            </p>
+            <p class="mb-0">
+                Built with Bootstrap 5 &amp; BabylonJS &middot;
+                <a href="https://github.com/Matthew-Peacock-UWS/JSGFpage" target="_blank" rel="noopener noreferrer">View
+                    on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

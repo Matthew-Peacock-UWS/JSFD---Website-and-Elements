@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Game Scenes | Matthew Peacock</title>
+    <meta name="description" content="Five interactive BabylonJS scenes built for JavaScript Games: Programming Fundamentals.">
+
+    <!-- Bootstrap 5 (CSS framework) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Custom theme (matches my portfolio) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Matthew Peacock<small>JSGF</small></a>
+
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main-nav"
+                aria-controls="main-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">Elements</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="element1.html"><span>01</span>Checkpoint</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element2.html"><span>02</span>Dead Town</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element3.html"><span>03</span>Supply Run</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element4.html"><span>04</span>Dead Ground</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="element5.html"><span>05</span>Escape</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="how-it-was-built.html">How It Was Built</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="https://github.com/Matthew-Peacock-UWS/JSGFpage"
+                            target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Hero -->
+        <header class="hero" id="home">
+            <div class="container">
+                <p class="eyebrow">COMP09090 &middot; JavaScript Games: Programming Fundamentals</p>
+
+                <h1 class="display-title mb-4">
+                    3D Game Scenes
+                    <span>in BabylonJS</span>
+                </h1>
+
+                <p class="lead-muted mb-4">
+                    Five interactive 3D scenes built with BabylonJS and TypeScript &mdash;
+                    from shapes and lighting through to a player character,
+                    GUI menus and multi-scene gameplay. Every scene is written
+                    entirely in code, with no Babylon.js Editor.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#elements" class="btn btn-dark">View the Scenes</a>
+                    <a href="how-it-was-built.html" class="btn btn-outline-dark">How It Was Built</a>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Elements -->
+        <section id="elements" class="section">
+            <div class="container">
+                <p class="section-label">The Elements</p>
+                <h2 class="section-title">Scenes</h2>
+                <p class="section-intro">
+                    Each element focuses on a different part of 3D web game development.
+                    Choose a scene to play it in the browser.
+                </p>
+
+                <div class="row g-4">
+                    <!-- Element 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card h-100">
+                            <a
+                                href="element1.html"
+                                class="element-thumb"
+                                aria-label="View Element 1">
+                                <span class="thumb-number">01</span>
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 01 &middot; BabylonJS</p>
+                                <h3 class="card-title">Checkpoint</h3>
+                                <p class="card-text">
+                                    An abandoned quarantine checkpoint at night: basic shapes, textures, lighting,
+                                    shadows and motion.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge tag">MeshBuilder</span>
+                                    <span class="badge tag">Textures</span>
+                                    <span class="badge tag">Lighting</span>
+                                    <span class="badge tag">Shadows</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="element1.html" class="text-link">View scene &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Element 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card h-100">
+                            <a
+                                href="element2.html"
+                                class="element-thumb"
+                                aria-label="View Element 2">
+                                <span class="thumb-number">02</span>
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 02 &middot; BabylonJS</p>
+                                <h3 class="card-title">Dead Town</h3>
+                                <p class="card-text">
+                                    A ruined town in a valley: height-map terrain, a night skybox and buildings made
+                                    from merged, cloned and instanced meshes.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge tag">Height Map</span>
+                                    <span class="badge tag">Skybox</span>
+                                    <span class="badge tag">Merging</span>
+                                    <span class="badge tag">Cloning</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="element2.html" class="text-link">View scene &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Element 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card h-100">
+                            <a
+                                href="element3.html"
+                                class="element-thumb"
+                                aria-label="View Element 3">
+                                <span class="thumb-number">03</span>
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 03 &middot; BabylonJS</p>
+                                <h3 class="card-title">Supply Run</h3>
+                                <p class="card-text">
+                                    An animated survivor pushing crates into a safe zone: player movement, animation and
+                                    Havok physics.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge tag">Imported Mesh</span>
+                                    <span class="badge tag">Player Input</span>
+                                    <span class="badge tag">Animation</span>
+                                    <span class="badge tag">Havok Physics</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="element3.html" class="text-link">View scene &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Element 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card h-100">
+                            <a
+                                href="element4.html"
+                                class="element-thumb"
+                                aria-label="View Element 4">
+                                <span class="thumb-number">04</span>
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 04 &middot; BabylonJS</p>
+                                <h3 class="card-title">Dead Ground</h3>
+                                <p class="card-text">
+                                    A GUI menu leading into a survival game where collisions with supplies and zombies
+                                    update the HUD.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge tag">Babylon GUI</span>
+                                    <span class="badge tag">Menu</span>
+                                    <span class="badge tag">Collisions</span>
+                                    <span class="badge tag">Audio</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="element4.html" class="text-link">View scene &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Element 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card h-100">
+                            <a
+                                href="element5.html"
+                                class="element-thumb"
+                                aria-label="View Element 5">
+                                <span class="thumb-number">05</span>
+                            </a>
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 05 &middot; BabylonJS</p>
+                                <h3 class="card-title">Escape</h3>
+                                <p class="card-text">
+                                    Two original levels, the Outskirts and the Bunker, linked by GUI buttons and in-game
+                                    triggers.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge tag">Original Design</span>
+                                    <span class="badge tag">Scene Switching</span>
+                                    <span class="badge tag">Triggers</span>
+                                    <span class="badge tag">GUI</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="element5.html" class="text-link">View scene &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Documentation -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card element-card card-doc h-100">
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-meta">Element 05 &middot; Write-up</p>
+                                <h3 class="card-title display-6 fw-bold">Documentation</h3>
+                                <p class="card-text">
+                                    A breakdown of my Element 5 scenes: the concept and design,
+                                    key code extracts, the GUI and how the scene transitions work.
+                                </p>
+                                <div class="mt-auto">
+                                    <a href="documentation.html" class="text-link">Read the documentation &rarr;</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Built in Code -->
+        <section id="built-in-code" class="section section-alt">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+
+                    <div class="col-lg-7">
+                        <p class="section-label">How It Was Built</p>
+                        <h2 class="section-title">Built in Code</h2>
+                        <p>
+                            None of these scenes were made in the Babylon.js Editor or any other
+                            visual editor. Every mesh, light, material, animation and menu is
+                            created by TypeScript code, using a set of shared functions that all
+                            five elements build on.
+                        </p>
+                        <a href="how-it-was-built.html" class="text-link">See how they were built &rarr;</a>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <table class="table details-table mb-0">
+                            <tbody>
+                                <tr><th scope="row">Scenes</th><td>Written in TypeScript</td></tr>
+                                <tr><th scope="row">Models</th><td>Built from primitive shapes</td></tr>
+                                <tr><th scope="row">Textures &amp; sound</th><td>Made in GIMP, BandLab and ChipTone</td></tr>
+                                <tr><th scope="row">Editor</th><td>None: no Babylon.js Editor</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Built With -->
+        <section id="built-with" class="section">
+            <div class="container">
+                <p class="section-label">Technologies</p>
+                <h2 class="section-title">Built With</h2>
+
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>BabylonJS</h3>
+                            <p>Open-source 3D engine used to build every scene.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>TypeScript</h3>
+                            <p>Typed JavaScript for the scene code.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>Vite</h3>
+                            <p>Development server and build tool for the scenes.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>Bootstrap 5</h3>
+                            <p>
+                                CSS framework for this website's layout, navigation and components.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>HTML5 &amp; CSS3</h3>
+                            <p>Semantic, responsive pages with a custom theme.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="skill">
+                            <h3>Git &amp; GitHub Pages</h3>
+                            <p>Version control and hosting for the site.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Back to top -->
+    <button
+        type="button"
+        class="btn btn-dark back-to-top"
+        id="back-to-top"
+        aria-label="Back to top">&uarr;</button>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+            <p class="mb-0">
+                &copy; <span class="js-year"></span> Matthew Peacock &middot; JavaScript Games:
+                Programming Fundamentals
+            </p>
+            <p class="mb-0">
+                Built with Bootstrap 5 &amp; BabylonJS &middot;
+                <a href="https://github.com/Matthew-Peacock-UWS/JSGFpage" target="_blank" rel="noopener noreferrer">View
+                    on GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
